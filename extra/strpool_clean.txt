@@ -1,0 +1,26 @@
+"Games"
+{
+	"left4dead2"
+	{
+		"Signatures"
+		{
+			"g_GameStringPool"
+			{
+				"library"	"server"
+				"linux"		"@_ZL16g_GameStringPool"
+			}
+
+			// Utilise function signature to iterate IGameSystem instances and locate CGameStringPool one
+			//  instead of using multiple hardcoded variables describing pointer position
+			"InvokeMethodReverseOrder"
+			{
+				"library"	"server"
+				// CServerGameDLL::DLLShutdown: xref from "stats.txt"
+				// second call after is IGameSystem::ShutdownAllSystems
+				// IGameSystem::ShutdownAllSystems's body only invokes InvokeMethodReverseOrder
+				// 55 8B EC 57 8B 3D ? ? ? ? 4F 78 ? 
+				"windows"	"\x55\x8B\xEC\x57\x8B\x3D\x2A\x2A\x2A\x2A\x4F\x78\x2A"
+			}
+		}
+	}
+}
