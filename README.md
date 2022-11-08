@@ -1,13 +1,11 @@
 Description
 ------
-
-Video Demonstration
-------
+Aimed to aggressively fix a game fatal error "CUtlRBTree overflow" with `CGameStringPool` (`CStringPool::Allocate`) being a culprit
 
 Requirements
 ------
 - [MM:Source (1.10+)](https://www.sourcemm.net/)
-- [SourceMod (1.8+)](https://www.sourcemod.net/)
+- [SourceMod (1.9+)](https://www.sourcemod.net/)
 
 Supported Games
 ------
