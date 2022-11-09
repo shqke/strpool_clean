@@ -1,6 +1,14 @@
 Description
 ------
-Aimed to aggressively fix a game fatal error "CUtlRBTree overflow" with `CGameStringPool` (`CStringPool::Allocate`) being a culprit
+Aims to aggressively patch a game fatal error "CUtlRBTree overflow" with `CGameStringPool` (`CStringPool::Allocate`) being a culprit.
+
+Currently extension targets entity names (`targetname`/`m_iName`) and unique vscript script ids (`m_iszScriptId`).
+
+Disclaimer
+------
+Testing currently. Can expect heavier memory usage.
+
+Ideally shouldn't be used, and if your server crashes with "CUtlRBTree overflow" - there might be a problem with a third party code causing a generation of too many strings (absolute limit is 65535).
 
 Requirements
 ------
