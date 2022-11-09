@@ -85,6 +85,10 @@ void CExtension::Handler_CGameStringPool_LevelShutdownPostEntity()
 
 void CExtension::OnEntityDestroyed(CBaseEntity* pEntity)
 {
+	if (pEntity == NULL) {
+		return;
+	}
+
 	RemovePooledString(pEntity, "m_iName");
 	RemovePooledString(pEntity, "m_iszScriptId");
 }

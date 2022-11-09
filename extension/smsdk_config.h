@@ -3,7 +3,7 @@
 
 #define SMEXT_CONF_NAME			"CGameStringPool cleaner"
 #define SMEXT_CONF_DESCRIPTION	"Cleans up stringpool from removed entities"
-#define SMEXT_CONF_VERSION		"0.5"
+#define SMEXT_CONF_VERSION		"0.6"
 #define SMEXT_CONF_AUTHOR		"Evgeniy \"shqke\" Kazakov"
 #define SMEXT_CONF_URL			"https://github.com/shqke/strpool_clean"
 #define SMEXT_CONF_LOGTAG		"strpool-clean"
